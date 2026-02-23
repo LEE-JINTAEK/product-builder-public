@@ -100,7 +100,6 @@ h1 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #4CAF50;
     color: white;
     display: flex;
     justify-content: center;
@@ -108,6 +107,12 @@ h1 {
     font-size: 1.1em;
     font-weight: bold;
 }
+
+.lotto-number.range-1  { background-color: #f9c11a; } /* 1~10  노랑 */
+.lotto-number.range-11 { background-color: #4e9ff5; } /* 11~20 파랑 */
+.lotto-number.range-21 { background-color: #f05353; } /* 21~30 빨강 */
+.lotto-number.range-31 { background-color: #888888; } /* 31~40 회색 */
+.lotto-number.range-41 { background-color: #4CAF50; } /* 41~45 초록 */
 
 #generate-btn {
     background-color: var(--btn-bg);

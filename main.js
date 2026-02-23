@@ -41,6 +41,12 @@ function displayNumbers(sets) {
         numbers.forEach(number => {
             const numberDiv = document.createElement('div');
             numberDiv.classList.add('lotto-number');
+            const rangeClass = number <= 10 ? 'range-1'
+                : number <= 20 ? 'range-11'
+                : number <= 30 ? 'range-21'
+                : number <= 40 ? 'range-31'
+                : 'range-41';
+            numberDiv.classList.add(rangeClass);
             numberDiv.textContent = number;
             rowDiv.appendChild(numberDiv);
         });
