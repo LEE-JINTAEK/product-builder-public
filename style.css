@@ -77,6 +77,37 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Language selector */
+.lang-selector {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.lang-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-btn:hover {
+    border-color: var(--btn-bg);
+    color: var(--btn-bg);
+}
+
+.lang-btn.active {
+    background-color: var(--btn-bg);
+    color: white;
+    border-color: var(--btn-bg);
+}
+
 .header {
     text-align: center;
     margin-bottom: 28px;
