@@ -188,6 +188,7 @@ const menus = [
 
 // ── 언어 상태 ────────────────────────────────────
 let currentLang = localStorage.getItem('lang') || 'ko';
+let currentMenus = [];
 
 function applyLang(lang) {
     currentLang = lang;
@@ -202,7 +203,8 @@ function applyLang(lang) {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
 
-    displayMenus(pickRandomMenus());
+    // 메뉴는 그대로, 언어만 바꿔서 다시 렌더링
+    displayMenus(currentMenus);
 }
 
 langBtns.forEach(btn => {
@@ -247,9 +249,11 @@ function displayMenus(picked) {
 }
 
 generateBtn.addEventListener('click', () => {
-    displayMenus(pickRandomMenus());
+    currentMenus = pickRandomMenus();
+    displayMenus(currentMenus);
 });
 
 // ── 초기화 ───────────────────────────────────────
 initTheme();
+currentMenus = pickRandomMenus();
 applyLang(currentLang);
