@@ -1,25 +1,73 @@
 
+:root {
+    --bg-color: #f0f2f5;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --btn-bg: #007bff;
+    --btn-hover: #0056b3;
+    --toggle-bg: #e2e8f0;
+    --toggle-color: #333333;
+}
+
+body.dark {
+    --bg-color: #1a1a2e;
+    --container-bg: #16213e;
+    --text-color: #e0e0e0;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --btn-bg: #4f8ef7;
+    --btn-hover: #2563eb;
+    --toggle-bg: #2d3748;
+    --toggle-color: #e0e0e0;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--toggle-bg);
+    color: var(--toggle-color);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 .container {
-    background-color: #fff;
+    background-color: var(--container-bg);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .lotto-numbers {
@@ -43,7 +91,7 @@ h1 {
 }
 
 #generate-btn {
-    background-color: #007bff;
+    background-color: var(--btn-bg);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -54,6 +102,5 @@ h1 {
 }
 
 #generate-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--btn-hover);
 }
-
