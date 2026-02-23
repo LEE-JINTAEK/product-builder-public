@@ -27,22 +27,36 @@ function generateLottoNumbers() {
     return Array.from(numbers).sort((a, b) => a - b);
 }
 
-function displayNumbers(numbers) {
+function displayNumbers(sets) {
     lottoNumbersContainer.innerHTML = '';
-    numbers.forEach(number => {
-        const numberDiv = document.createElement('div');
-        numberDiv.classList.add('lotto-number');
-        numberDiv.textContent = number;
-        lottoNumbersContainer.appendChild(numberDiv);
+    sets.forEach((numbers, index) => {
+        const rowDiv = document.createElement('div');
+        rowDiv.classList.add('lotto-row');
+
+        const label = document.createElement('span');
+        label.classList.add('row-label');
+        label.textContent = `${index + 1}`;
+        rowDiv.appendChild(label);
+
+        numbers.forEach(number => {
+            const numberDiv = document.createElement('div');
+            numberDiv.classList.add('lotto-number');
+            numberDiv.textContent = number;
+            rowDiv.appendChild(numberDiv);
+        });
+
+        lottoNumbersContainer.appendChild(rowDiv);
     });
 }
 
+function generateFiveSets() {
+    return Array.from({ length: 5 }, generateLottoNumbers);
+}
+
 generateBtn.addEventListener('click', () => {
-    const numbers = generateLottoNumbers();
-    displayNumbers(numbers);
+    displayNumbers(generateFiveSets());
 });
 
 // Initial setup
 initTheme();
-const initialNumbers = generateLottoNumbers();
-displayNumbers(initialNumbers);
+displayNumbers(generateFiveSets());
