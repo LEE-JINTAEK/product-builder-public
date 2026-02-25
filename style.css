@@ -211,3 +211,88 @@ h1 {
 #generate-btn:active {
     transform: scale(0.98);
 }
+
+/* ── 제휴 문의 폼 ─────────────────────────────── */
+.contact-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--card-border);
+}
+
+.contact-title {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.contact-desc {
+    font-size: 0.85em;
+    color: var(--subtitle-color);
+    margin-bottom: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.9em;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--btn-bg);
+}
+
+#submit-btn {
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 4px;
+}
+
+#submit-btn:hover:not(:disabled) {
+    background-color: var(--btn-hover);
+}
+
+#submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+#form-status.status-ok  { color: #27ae60; }
+#form-status.status-err { color: #e74c3c; }

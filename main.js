@@ -253,6 +253,42 @@ generateBtn.addEventListener('click', () => {
     displayMenus(currentMenus);
 });
 
+// ── 제휴 문의 폼 ─────────────────────────────────
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = '전송 중...';
+    formStatus.textContent = '';
+    formStatus.className = '';
+
+    const data = new FormData(contactForm);
+    try {
+        const res = await fetch(contactForm.action, {
+            method: 'POST',
+            body: data,
+            headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+            formStatus.textContent = '✅ 문의가 전송되었습니다. 감사합니다!';
+            formStatus.className = 'status-ok';
+            contactForm.reset();
+        } else {
+            formStatus.textContent = '❌ 전송에 실패했습니다. 다시 시도해주세요.';
+            formStatus.className = 'status-err';
+        }
+    } catch {
+        formStatus.textContent = '❌ 네트워크 오류가 발생했습니다.';
+        formStatus.className = 'status-err';
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '보내기';
+    }
+});
+
 // ── 초기화 ───────────────────────────────────────
 initTheme();
 currentMenus = pickRandomMenus();
