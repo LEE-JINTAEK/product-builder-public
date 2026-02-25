@@ -41,7 +41,7 @@ body {
 
 #theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 66px;
     right: 20px;
     background-color: var(--toggle-bg);
     color: var(--toggle-color);
