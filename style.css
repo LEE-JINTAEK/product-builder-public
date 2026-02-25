@@ -35,11 +35,7 @@ body.dark {
 body {
     font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif;
     background-color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     min-height: 100vh;
-    padding: 40px 16px;
     transition: background-color 0.3s ease;
 }
 
@@ -300,8 +296,9 @@ h1 {
 /* ── Disqus 댓글 ──────────────────────────────── */
 .disqus-wrapper {
     width: 100%;
-    max-width: 720px;
-    margin: 32px auto 0;
+    max-width: 480px;
+    margin-top: 28px;
+    margin-bottom: 40px;
     background-color: var(--container-bg);
     border-radius: 16px;
     box-shadow: var(--shadow);
@@ -314,4 +311,186 @@ h1 {
     color: var(--text-color);
     margin-bottom: 20px;
     transition: color 0.3s ease;
+}
+
+/* ── 메인 래퍼 ──────────────────────────────────── */
+.main-wrapper {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* ── 광고 영역 ──────────────────────────────────── */
+.ad-area {
+    margin-top: 24px;
+    min-height: 90px;
+}
+
+/* ── 서비스 소개 인포 섹션 ───────────────────────── */
+.info-section,
+.category-section,
+.faq-section {
+    width: 100%;
+    max-width: 480px;
+    margin-top: 28px;
+    background-color: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 28px 28px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-inner h2 {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.info-inner p {
+    font-size: 0.88em;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.info-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 12px 8px;
+}
+
+.stat-num {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--btn-bg);
+}
+
+.stat-label {
+    font-size: 0.75em;
+    color: var(--subtitle-color);
+}
+
+/* ── 카테고리 그리드 ────────────────────────────── */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 12px 6px;
+    transition: border-color 0.2s, transform 0.15s;
+}
+
+.category-card:hover {
+    border-color: var(--btn-bg);
+    transform: translateY(-2px);
+}
+
+.cat-emoji {
+    font-size: 1.5em;
+}
+
+.cat-name {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.cat-desc {
+    font-size: 0.68em;
+    color: var(--subtitle-color);
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ── FAQ ────────────────────────────────────────── */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faq-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.faq-item summary {
+    padding: 14px 16px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.2em;
+    color: var(--btn-bg);
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+}
+
+.faq-item p {
+    padding: 0 16px 14px;
+    font-size: 0.86em;
+    color: var(--text-color);
+    line-height: 1.8;
+    border-top: 1px solid var(--card-border);
+    padding-top: 12px;
+}
+
+/* ── 반응형 보완 ──────────────────────────────── */
+@media (max-width: 520px) {
+    .info-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

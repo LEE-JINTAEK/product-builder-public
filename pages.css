@@ -1,0 +1,597 @@
+/* ── 공통 네비게이션 ──────────────────────────────── */
+.site-nav {
+    background-color: var(--container-bg);
+    border-bottom: 1px solid var(--card-border);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nav-logo {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.nav-logo:hover {
+    color: var(--btn-bg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--subtitle-color);
+    font-size: 0.85em;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--btn-bg);
+    background-color: var(--card-bg);
+}
+
+/* ── 공통 푸터 ─────────────────────────────────── */
+.site-footer {
+    margin-top: 48px;
+    border-top: 1px solid var(--card-border);
+    background-color: var(--container-bg);
+    padding: 32px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+.footer-nav a {
+    color: var(--subtitle-color);
+    text-decoration: none;
+    font-size: 0.82em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: var(--btn-bg);
+}
+
+.footer-copy {
+    font-size: 0.78em;
+    color: var(--subtitle-color);
+}
+
+/* ── 페이지 공통 레이아웃 ──────────────────────── */
+.page-main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-container {
+    background-color: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 40px 36px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-title {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.page-date {
+    font-size: 0.85em;
+    color: var(--subtitle-color);
+    margin-bottom: 32px;
+}
+
+/* ── 개인정보처리방침 / 이용약관 ────────────────── */
+.policy-section {
+    margin-bottom: 32px;
+}
+
+.policy-section h2 {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.policy-section p {
+    font-size: 0.92em;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.policy-section ul,
+.policy-section ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.policy-section li {
+    font-size: 0.92em;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 4px;
+}
+
+.policy-section a {
+    color: var(--btn-bg);
+    text-decoration: none;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+.policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88em;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.policy-table th,
+.policy-table td {
+    border: 1px solid var(--card-border);
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.policy-table th {
+    background-color: var(--card-bg);
+    font-weight: bold;
+}
+
+/* ── About 페이지 ────────────────────────────── */
+.about-hero {
+    text-align: center;
+    padding: 20px 0 36px;
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 36px;
+}
+
+.about-hero-emoji {
+    font-size: 3.5em;
+    margin-bottom: 12px;
+}
+
+.about-hero h1 {
+    font-size: 1.9em;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.about-hero-sub {
+    font-size: 1em;
+    color: var(--subtitle-color);
+}
+
+.about-section {
+    margin-bottom: 32px;
+}
+
+.about-section h2 {
+    font-size: 1.15em;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.about-section p {
+    font-size: 0.93em;
+    color: var(--text-color);
+    line-height: 1.85;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    padding-left: 4px;
+    list-style: none;
+}
+
+.about-section ul li {
+    font-size: 0.93em;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 6px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-icon {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.feature-card h3 {
+    font-size: 0.95em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.feature-card p {
+    font-size: 0.82em;
+    color: var(--subtitle-color);
+    line-height: 1.6;
+}
+
+.recommend-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px;
+}
+
+.recommend-list li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.9em;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.about-contact {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 20px;
+    border: 1px solid var(--card-border);
+}
+
+.about-contact h2 {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.about-contact p {
+    font-size: 0.9em;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.about-contact a {
+    color: var(--btn-bg);
+    text-decoration: none;
+}
+
+/* ── 음식 가이드 페이지 ──────────────────────── */
+.guide-container {
+    max-width: 900px;
+}
+
+.page-main.guide-page {
+    max-width: 940px;
+}
+
+.guide-hero {
+    text-align: center;
+    padding: 16px 0 32px;
+    border-bottom: 1px solid var(--card-border);
+    margin-bottom: 32px;
+}
+
+.guide-hero h1 {
+    font-size: 1.7em;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.guide-hero p {
+    font-size: 0.95em;
+    color: var(--subtitle-color);
+}
+
+/* 목차 */
+.toc {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+    transition: background-color 0.3s ease;
+}
+
+.toc h2 {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.toc ol {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 4px 16px;
+}
+
+.toc li {
+    font-size: 0.88em;
+    line-height: 1.8;
+}
+
+.toc a {
+    color: var(--btn-bg);
+    text-decoration: none;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* 가이드 섹션 */
+.guide-section {
+    margin-bottom: 48px;
+}
+
+.guide-category-title {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cat-badge {
+    font-size: 0.6em;
+    font-weight: bold;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+.cat-korean  { background-color: #e67e22; }
+.cat-chinese { background-color: #e74c3c; }
+.cat-japanese { background-color: #8e44ad; }
+.cat-western { background-color: #2980b9; }
+.cat-snack   { background-color: #27ae60; }
+
+.guide-intro {
+    font-size: 0.9em;
+    color: var(--subtitle-color);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border-left: 3px solid var(--btn-bg);
+}
+
+.food-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.food-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.food-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.food-emoji {
+    font-size: 2.2em;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.food-card h3 {
+    font-size: 1.05em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 3px;
+}
+
+.food-sub {
+    font-size: 0.78em;
+    color: var(--subtitle-color);
+}
+
+.food-card > p {
+    font-size: 0.88em;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.food-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.food-tag {
+    font-size: 0.78em;
+    color: var(--text-color);
+    background-color: var(--container-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+/* 팁 그리드 */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.tip-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tip-card h3 {
+    font-size: 0.95em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.tip-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tip-card li {
+    font-size: 0.85em;
+    color: var(--text-color);
+    line-height: 1.7;
+    padding: 2px 0;
+    border-bottom: 1px dashed var(--card-border);
+}
+
+.tip-card li:last-child {
+    border-bottom: none;
+}
+
+.guide-cta {
+    text-align: center;
+    padding: 36px 0 8px;
+    border-top: 1px solid var(--card-border);
+    margin-top: 16px;
+}
+
+.guide-cta p {
+    font-size: 1em;
+    color: var(--subtitle-color);
+    margin-bottom: 16px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: white;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-1px);
+}
+
+/* ── 반응형 ──────────────────────────────────── */
+@media (max-width: 600px) {
+    .page-container {
+        padding: 28px 20px;
+    }
+
+    .nav-links a {
+        font-size: 0.78em;
+        padding: 5px 7px;
+    }
+
+    .features-grid,
+    .tips-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .recommend-list {
+        grid-template-columns: 1fr;
+    }
+
+    .toc ol {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card-header {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .features-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
