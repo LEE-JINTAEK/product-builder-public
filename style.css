@@ -296,3 +296,22 @@ h1 {
 
 #form-status.status-ok  { color: #27ae60; }
 #form-status.status-err { color: #e74c3c; }
+
+/* ── Disqus 댓글 ──────────────────────────────── */
+.disqus-wrapper {
+    width: 100%;
+    max-width: 720px;
+    margin: 32px auto 0;
+    background-color: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 32px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disqus-title {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
