@@ -23,13 +23,19 @@
 <body>
     <nav class="site-nav">
         <div class="nav-inner">
-            <a class="nav-logo" href="index.html">🍽️ 오늘 저녁 뭐 먹지?</a>
+            <a class="nav-logo" href="index.html" data-i18n="nav.logo">🍽️ 오늘 저녁 뭐 먹지?</a>
             <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="guide.html">음식 가이드</a></li>
-                <li><a href="about.html" class="active">소개</a></li>
-                <li><a href="privacy.html">개인정보처리방침</a></li>
+                <li><a href="index.html" data-i18n="nav.home">홈</a></li>
+                <li><a href="guide.html" data-i18n="nav.guide">음식 가이드</a></li>
+                <li><a href="about.html" class="active" data-i18n="nav.about">소개</a></li>
+                <li><a href="privacy.html" data-i18n="nav.privacy">개인정보처리방침</a></li>
             </ul>
+            <div class="nav-lang">
+                <button class="lang-btn" data-lang="ko">🇰🇷</button>
+                <button class="lang-btn" data-lang="en">🇺🇸</button>
+                <button class="lang-btn" data-lang="ja">🇯🇵</button>
+                <button class="lang-btn" data-lang="zh">🇨🇳</button>
+            </div>
         </div>
     </nav>
 
@@ -38,101 +44,112 @@
 
             <section class="about-hero">
                 <div class="about-hero-emoji">🍽️</div>
-                <h1>오늘 저녁 뭐 먹지?</h1>
-                <p class="about-hero-sub">매일 반복되는 메뉴 고민, 저희가 해결해드립니다.</p>
+                <h1 data-i18n="about.hero.title">오늘 저녁 뭐 먹지?</h1>
+                <p class="about-hero-sub" data-i18n="about.hero.sub">매일 반복되는 메뉴 고민, 저희가 해결해드립니다.</p>
             </section>
 
             <section class="about-section">
-                <h2>서비스 소개</h2>
-                <p>"오늘 저녁 뭐 먹지?"는 하루의 끝, 저녁 메뉴를 고민하는 모든 분들을 위해 만들어진 무료 음식 추천 서비스입니다.</p>
-                <p>한국인의 식탁을 책임지는 한식부터 중식, 일식, 양식, 분식까지 — 30가지 이상의 엄선된 메뉴 중에서 매번 신선하게 5가지를 무작위로 추천해드립니다. 버튼 한 번으로 오늘 저녁의 고민을 끝내세요.</p>
+                <h2 data-i18n="about.intro.title">서비스 소개</h2>
+                <p data-i18n="about.intro.p1">"오늘 저녁 뭐 먹지?"는 하루의 끝, 저녁 메뉴를 고민하는 모든 분들을 위해 만들어진 무료 음식 추천 서비스입니다.</p>
+                <p data-i18n="about.intro.p2">한국인의 식탁을 책임지는 한식부터 중식, 일식, 양식, 분식까지 — 30가지 이상의 엄선된 메뉴 중에서 매번 신선하게 5가지를 무작위로 추천해드립니다. 버튼 한 번으로 오늘 저녁의 고민을 끝내세요.</p>
             </section>
 
             <section class="about-section">
-                <h2>왜 만들었나요?</h2>
-                <p>직장인, 주부, 자취생 모두가 매일 겪는 공통된 고민이 있습니다. 바로 "오늘 뭐 먹지?"라는 질문입니다. 실제로 연구에 따르면 사람들은 하루 평균 약 200가지 이상의 음식 관련 결정을 내린다고 합니다. 그 중에서도 저녁 메뉴 결정은 가장 큰 스트레스 중 하나로 꼽힙니다.</p>
-                <p>이 서비스는 그 고민을 단 1초 만에 해결하기 위해 탄생했습니다. 복잡한 앱 설치 없이, 회원가입 없이, 광고 클릭 없이도 바로 사용할 수 있는 심플한 서비스를 목표로 했습니다.</p>
+                <h2 data-i18n="about.why.title">왜 만들었나요?</h2>
+                <p data-i18n="about.why.p1">직장인, 주부, 자취생 모두가 매일 겪는 공통된 고민이 있습니다. 바로 "오늘 뭐 먹지?"라는 질문입니다. 실제로 연구에 따르면 사람들은 하루 평균 약 200가지 이상의 음식 관련 결정을 내린다고 합니다. 그 중에서도 저녁 메뉴 결정은 가장 큰 스트레스 중 하나로 꼽힙니다.</p>
+                <p data-i18n="about.why.p2">이 서비스는 그 고민을 단 1초 만에 해결하기 위해 탄생했습니다. 복잡한 앱 설치 없이, 회원가입 없이, 광고 클릭 없이도 바로 사용할 수 있는 심플한 서비스를 목표로 했습니다.</p>
             </section>
 
             <section class="about-features">
-                <h2>주요 기능</h2>
+                <h2 data-i18n="about.features.title">주요 기능</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">🎲</div>
-                        <h3>랜덤 메뉴 추천</h3>
-                        <p>버튼 하나로 5가지 메뉴를 무작위 추천. 질리지 않는 다양한 조합.</p>
+                        <h3 data-i18n="feat.random.title">랜덤 메뉴 추천</h3>
+                        <p data-i18n="feat.random.desc">버튼 하나로 5가지 메뉴를 무작위 추천. 질리지 않는 다양한 조합.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌏</div>
-                        <h3>4개 언어 지원</h3>
-                        <p>한국어, 영어, 일본어, 중국어로 서비스를 이용하세요. 외국인 친구에게도 추천.</p>
+                        <h3 data-i18n="feat.lang.title">4개 언어 지원</h3>
+                        <p data-i18n="feat.lang.desc">한국어, 영어, 일본어, 중국어로 서비스를 이용하세요. 외국인 친구에게도 추천.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌙</div>
-                        <h3>다크 모드</h3>
-                        <p>눈이 편안한 다크 모드 지원. 밤에도 눈에 무리 없이 사용하세요.</p>
+                        <h3 data-i18n="feat.dark.title">다크 모드</h3>
+                        <p data-i18n="feat.dark.desc">눈이 편안한 다크 모드 지원. 밤에도 눈에 무리 없이 사용하세요.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📱</div>
-                        <h3>모바일 최적화</h3>
-                        <p>스마트폰, 태블릿, PC 어디서든 최적화된 화면으로 이용 가능.</p>
+                        <h3 data-i18n="feat.mobile.title">모바일 최적화</h3>
+                        <p data-i18n="feat.mobile.desc">스마트폰, 태블릿, PC 어디서든 최적화된 화면으로 이용 가능.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🍱</div>
-                        <h3>다양한 카테고리</h3>
-                        <p>한식, 중식, 일식, 양식, 분식 — 5가지 카테고리, 30개 이상의 메뉴.</p>
+                        <h3 data-i18n="feat.cat.title">다양한 카테고리</h3>
+                        <p data-i18n="feat.cat.desc">한식, 중식, 일식, 양식, 분식 — 5가지 카테고리, 30개 이상의 메뉴.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🆓</div>
-                        <h3>완전 무료</h3>
-                        <p>회원가입, 앱 설치, 결제 모두 필요 없습니다. 완전히 무료로 이용하세요.</p>
+                        <h3 data-i18n="feat.free.title">완전 무료</h3>
+                        <p data-i18n="feat.free.desc">회원가입, 앱 설치, 결제 모두 필요 없습니다. 완전히 무료로 이용하세요.</p>
                     </div>
                 </div>
             </section>
 
             <section class="about-section">
-                <h2>이런 분들께 추천합니다</h2>
+                <h2 data-i18n="about.who.title">이런 분들께 추천합니다</h2>
                 <ul class="recommend-list">
-                    <li>🏢 퇴근 후 저녁 메뉴를 고민하는 직장인</li>
-                    <li>👨‍👩‍👧 매일 가족 밥상을 차려야 하는 주부</li>
-                    <li>🏠 혼자 사는 자취생</li>
-                    <li>👫 외식 장소를 정하지 못하는 커플</li>
-                    <li>🍴 배달 앱에서 뭘 시킬지 고민되는 분</li>
-                    <li>🌎 한국 음식에 관심 있는 외국인</li>
+                    <li data-i18n="about.who.1">🏢 퇴근 후 저녁 메뉴를 고민하는 직장인</li>
+                    <li data-i18n="about.who.2">👨‍👩‍👧 매일 가족 밥상을 차려야 하는 주부</li>
+                    <li data-i18n="about.who.3">🏠 혼자 사는 자취생</li>
+                    <li data-i18n="about.who.4">👫 외식 장소를 정하지 못하는 커플</li>
+                    <li data-i18n="about.who.5">🍴 배달 앱에서 뭘 시킬지 고민되는 분</li>
+                    <li data-i18n="about.who.6">🌎 한국 음식에 관심 있는 외국인</li>
                 </ul>
             </section>
 
             <section class="about-section">
-                <h2>앞으로의 계획</h2>
-                <p>현재 서비스는 저녁 메뉴 랜덤 추천을 제공하고 있으며, 앞으로 더 많은 기능을 추가할 예정입니다.</p>
+                <h2 data-i18n="about.plan.title">앞으로의 계획</h2>
+                <p data-i18n="about.plan.p">현재 서비스는 저녁 메뉴 랜덤 추천을 제공하고 있으며, 앞으로 더 많은 기능을 추가할 예정입니다.</p>
                 <ul>
-                    <li>음식 칼로리 및 영양 정보 제공</li>
-                    <li>지역별 맛집 연동</li>
-                    <li>음식 알레르기 필터 기능</li>
-                    <li>즐겨찾기 메뉴 저장 기능</li>
-                    <li>음식 레시피 연동</li>
+                    <li data-i18n="about.plan.1">음식 칼로리 및 영양 정보 제공</li>
+                    <li data-i18n="about.plan.2">지역별 맛집 연동</li>
+                    <li data-i18n="about.plan.3">음식 알레르기 필터 기능</li>
+                    <li data-i18n="about.plan.4">즐겨찾기 메뉴 저장 기능</li>
+                    <li data-i18n="about.plan.5">음식 레시피 연동</li>
                 </ul>
             </section>
 
             <section class="about-contact">
-                <h2>문의 및 제휴</h2>
-                <p>서비스에 대한 의견, 버그 신고, 광고·제휴 문의는 <a href="index.html#contact">문의 폼</a>을 이용해 주세요. 모든 문의에 빠르게 답변드리겠습니다.</p>
+                <h2 data-i18n="about.contact.title">문의 및 제휴</h2>
+                <p data-i18n-html="about.contact.p">서비스에 대한 의견, 버그 신고, 광고·제휴 문의는 <a href="index.html#contact">문의 폼</a>을 이용해 주세요. 모든 문의에 빠르게 답변드리겠습니다.</p>
             </section>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p class="footer-logo">🍽️ 오늘 저녁 뭐 먹지?</p>
+            <p class="footer-logo" data-i18n="footer.logo">🍽️ 오늘 저녁 뭐 먹지?</p>
             <nav class="footer-nav">
-                <a href="index.html">홈</a>
-                <a href="guide.html">음식 가이드</a>
-                <a href="about.html">소개</a>
-                <a href="privacy.html">개인정보처리방침</a>
-                <a href="terms.html">이용약관</a>
+                <a href="index.html" data-i18n="nav.home">홈</a>
+                <a href="guide.html" data-i18n="nav.guide">음식 가이드</a>
+                <a href="about.html" data-i18n="nav.about">소개</a>
+                <a href="privacy.html" data-i18n="nav.privacy">개인정보처리방침</a>
+                <a href="terms.html" data-i18n="footer.terms">이용약관</a>
             </nav>
-            <p class="footer-copy">&copy; 2025 오늘 저녁 뭐 먹지? All rights reserved.</p>
+            <p class="footer-copy" data-i18n="footer.copy">&copy; 2025 오늘 저녁 뭐 먹지? All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="i18n.js"></script>
+    <script>
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                localStorage.setItem('lang', lang);
+                applyI18n(lang);
+            });
+        });
+    </script>
 </body>
 </html>

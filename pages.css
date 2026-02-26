@@ -56,6 +56,30 @@
     background-color: var(--card-bg);
 }
 
+/* ── 서브페이지 네비 언어 버튼 ─────────────────────── */
+.nav-lang {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.nav-lang .lang-btn {
+    background: none;
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    padding: 3px 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    line-height: 1;
+}
+
+.nav-lang .lang-btn:hover,
+.nav-lang .lang-btn.active {
+    background-color: var(--card-bg);
+    border-color: var(--btn-bg);
+}
+
 /* ── 공통 푸터 ─────────────────────────────────── */
 .site-footer {
     margin-top: 48px;

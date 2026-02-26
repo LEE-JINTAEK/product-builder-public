@@ -13,13 +13,19 @@
 <body>
     <nav class="site-nav">
         <div class="nav-inner">
-            <a class="nav-logo" href="index.html">🍽️ 오늘 저녁 뭐 먹지?</a>
+            <a class="nav-logo" href="index.html" data-i18n="nav.logo">🍽️ 오늘 저녁 뭐 먹지?</a>
             <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="guide.html">음식 가이드</a></li>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="privacy.html" class="active">개인정보처리방침</a></li>
+                <li><a href="index.html" data-i18n="nav.home">홈</a></li>
+                <li><a href="guide.html" data-i18n="nav.guide">음식 가이드</a></li>
+                <li><a href="about.html" data-i18n="nav.about">소개</a></li>
+                <li><a href="privacy.html" class="active" data-i18n="nav.privacy">개인정보처리방침</a></li>
             </ul>
+            <div class="nav-lang">
+                <button class="lang-btn" data-lang="ko">🇰🇷</button>
+                <button class="lang-btn" data-lang="en">🇺🇸</button>
+                <button class="lang-btn" data-lang="ja">🇯🇵</button>
+                <button class="lang-btn" data-lang="zh">🇨🇳</button>
+            </div>
         </div>
     </nav>
 
@@ -125,16 +131,27 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p class="footer-logo">🍽️ 오늘 저녁 뭐 먹지?</p>
+            <p class="footer-logo" data-i18n="footer.logo">🍽️ 오늘 저녁 뭐 먹지?</p>
             <nav class="footer-nav">
-                <a href="index.html">홈</a>
-                <a href="guide.html">음식 가이드</a>
-                <a href="about.html">소개</a>
-                <a href="privacy.html">개인정보처리방침</a>
-                <a href="terms.html">이용약관</a>
+                <a href="index.html" data-i18n="nav.home">홈</a>
+                <a href="guide.html" data-i18n="nav.guide">음식 가이드</a>
+                <a href="about.html" data-i18n="nav.about">소개</a>
+                <a href="privacy.html" data-i18n="nav.privacy">개인정보처리방침</a>
+                <a href="terms.html" data-i18n="footer.terms">이용약관</a>
             </nav>
-            <p class="footer-copy">&copy; 2025 오늘 저녁 뭐 먹지? All rights reserved.</p>
+            <p class="footer-copy" data-i18n="footer.copy">&copy; 2025 오늘 저녁 뭐 먹지? All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="i18n.js"></script>
+    <script>
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                localStorage.setItem('lang', lang);
+                applyI18n(lang);
+            });
+        });
+    </script>
 </body>
 </html>

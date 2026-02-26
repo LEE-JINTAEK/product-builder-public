@@ -1,16 +1,14 @@
 const generateBtn = document.getElementById('generate-btn');
 const menuList = document.getElementById('menu-list');
 const themeToggle = document.getElementById('theme-toggle');
-const titleEl = document.getElementById('title');
-const subtitleEl = document.getElementById('subtitle');
 const langBtns = document.querySelectorAll('.lang-btn');
 
-// ── UI 문구 번역 ─────────────────────────────────
+// ── UI 문구 (날씨 관련만 유지, 나머지는 i18n.js 담당) ────
 const ui = {
-    ko: { title: '🍽️ 오늘 저녁 뭐 먹지?',   subtitle: '고민하지 말고, 추천받으세요!',          btn: '🎲 메뉴 다시 추천',   weatherLoading: '📍 날씨 정보를 가져오는 중...', weatherBadge: '날씨 추천' },
-    en: { title: '🍽️ What\'s for Dinner?',   subtitle: 'Stop overthinking, get a recommendation!', btn: '🎲 Recommend Again',   weatherLoading: '📍 Getting weather info...',      weatherBadge: 'Weather Pick' },
-    ja: { title: '🍽️ 今夜の夕食は何？',       subtitle: '悩まず、おすすめを受け取ろう！',          btn: '🎲 もう一度おすすめ', weatherLoading: '📍 天気情報を取得中...',          weatherBadge: 'おすすめ' },
-    zh: { title: '🍽️ 今晚吃什么？',           subtitle: '别烦恼了，让我来推荐！',                  btn: '🎲 重新推荐',         weatherLoading: '📍 正在获取天气信息...',          weatherBadge: '天气推荐' },
+    ko: { weatherLoading: '📍 날씨 정보를 가져오는 중...', weatherBadge: '날씨 추천' },
+    en: { weatherLoading: '📍 Getting weather info...',      weatherBadge: 'Weather Pick' },
+    ja: { weatherLoading: '📍 天気情報を取得中...',          weatherBadge: 'おすすめ' },
+    zh: { weatherLoading: '📍 正在获取天气信息...',          weatherBadge: '天气推荐' },
 };
 
 // ── 날씨 메시지 번역 ─────────────────────────────
@@ -410,14 +408,8 @@ function applyLang(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
 
-    titleEl.textContent    = ui[lang].title;
-    subtitleEl.textContent = ui[lang].subtitle;
-    generateBtn.textContent = ui[lang].btn;
-    document.documentElement.lang = lang;
-
-    langBtns.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
+    // i18n.js 가 로드된 경우 모든 페이지 정적 텍스트 번역
+    if (typeof applyI18n === 'function') applyI18n(lang);
 
     displayMenus(currentMenus, currentWeatherConditions);
     displayWeatherBanner();
