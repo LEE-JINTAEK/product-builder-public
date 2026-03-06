@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lee-jintaek.github.io/product-builder-public/sitemap.xml
+Sitemap: https://product-builder-public-e9o.pages.dev/sitemap.xml
